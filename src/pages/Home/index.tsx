@@ -1,9 +1,9 @@
 import './styles.css';
 import {ReactComponent as HomeImg} from './home.svg'
-import Footer from '../Footer';
+import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
 
-function Home() {
+const Home: React.FC = () => {
     return (
         <>
         <div className="home-container">
@@ -16,7 +16,7 @@ function Home() {
                     Escolha o seu pedido e em poucos minutos <br/>
                     levaremoss na sua porta
                     </h3>
-                    <Link to="orders" className="home-btn-order">FAZER PEDIDO</Link>
+                    <Link to="/orders" className="home-btn-order">FAZER PEDIDO</Link>
                 </div>
                 <div className="home-image">
                     <HomeImg />

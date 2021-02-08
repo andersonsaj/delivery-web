@@ -4,7 +4,7 @@ import {ReactComponent as InstagramIcon} from './instagram.svg';
 
 import './styles.css';
 
-function Footer() {
+const Footer: React.FC = () => {
     return (
         <footer className="main-footer">
             App desenvolvido durante a 2ª ed. do evento Semana DevSuperior
