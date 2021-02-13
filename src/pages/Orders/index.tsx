@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import api from "../../services/api";
+import { api } from "../../services/api";
+import OrderLocation from "./OrderLocation";
 import ProductList from "./ProductsList";
 import StepsHeader from "./StepsHeader"
 import './styles.css';
-import { Product } from "./types";
+import { OrderLocationData, Product } from "./types";
 
 const Orders: React.FC = () => {
     const [products, setProducts] = useState<Product[]>([]);
+    const [orderLocation, setOrderLocation] = useState<OrderLocationData>();
     
     useEffect(() => {
         api.get('/products')
@@ -18,6 +20,7 @@ const Orders: React.FC = () => {
         <div className="orders-container">
             <StepsHeader />
             <ProductList products={products} />
+            <OrderLocation onChangeLocation={location => setOrderLocation(location)}/>
         </div>
     )
 }
