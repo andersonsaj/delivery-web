@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
 import OrderLocation from "./OrderLocation";
+import OrderSummary from "./OrderSummary";
 import ProductList from "./ProductsList";
 import StepsHeader from "./StepsHeader"
 import './styles.css';
@@ -21,6 +22,7 @@ const Orders: React.FC = () => {
             <StepsHeader />
             <ProductList products={products} />
             <OrderLocation onChangeLocation={location => setOrderLocation(location)}/>
+            <OrderSummary />
         </div>
     )
 }
