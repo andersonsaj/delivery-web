@@ -1,19 +1,33 @@
-import { useState } from "react";
+import { formatPrice } from './helpers';
 
-const OrderSummary: React.FC = () => {
-    const [val, setVal] = useState('');
+type Props = {
+  amount: number;
+  totalPrice: number;
+  onSubmit: () => void;
+};
 
-    return (
-        <div className="order-summsry-container">
-            <div className="order-summary-content">
-                <input id="num" type="number"
-                value={val}
-                onChange={e => e.target.value.length <= 6 ? setVal(e.target.value) 
-                    : setVal((e.target.value.substring(0, e.target.value.length -1)))}
-                />
-            </div>
+const OrderSummary: React.FC<Props> = ({ amount, totalPrice, onSubmit }) => {
+  return (
+    <div className="order-summary-container">
+      <div className="order-summary-content">
+        <div>
+          <span className="amount-selected-container">
+            <strong className="amount-selected">{amount}</strong>
+            PEDIDOS SELECIONADOS
+          </span>
+          <span className="order-summary-total">
+            <strong className="amount-selected">
+              {formatPrice(totalPrice)}
+            </strong>
+            VALOR TOTAL
+          </span>
         </div>
-    )
-}
+        <button className="order-summary-make-order" onClick={onSubmit}>
+          FAZER PEDIDO
+        </button>
+      </div>
+    </div>
+  );
+};
 
 export default OrderSummary;

@@ -1,9 +1,9 @@
 .main-footer {
-  position: absolute;
   width: 100%;
-  bottom: 0;
+  height: 60px;
   padding-top: 15px;
-  padding-bottom: 15px;
+  left: 0;
+  bottom: 0;
   background-color: var(--dark-color);
   font-weight: normal;
   font-size: 12px;
