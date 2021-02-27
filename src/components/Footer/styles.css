@@ -21,3 +21,15 @@
 .footer-icons > * {
   margin-right: 5px;
 }
+
+@media (max-width: 770px){
+  .main-footer {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 770px){
+  .main-footer {
+    height: 70px;
+  }
+}
