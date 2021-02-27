@@ -13,14 +13,11 @@ const Footer: React.FC = () => {
           <YoutubeIcon />
         </a>
 
-        <a
-          href="https://www.linkedin.com/in/anderson-barretosb09/"
-          target="_new"
-        >
+        <a href="https://www.linkedin.com" target="_new">
           <LinkedinIcon />
         </a>
 
-        <a href="https://www.instagram.com/andersonsb09" target="_new">
+        <a href="https://www.instagram.com" target="_new">
           <InstagramIcon />
         </a>
       </div>
