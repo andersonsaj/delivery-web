@@ -19,7 +19,7 @@ const Orders: React.FC = () => {
     api
       .get('/products')
       .then(response => setProducts(response.data))
-      .catch(error => console.error(error));
+      .catch(() => toast.warning('Erro ao listar produtos'));
   }, []);
 
   const totalPrice = selectedProducts.reduce(

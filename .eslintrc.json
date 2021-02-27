@@ -27,6 +27,8 @@
   "rules": {
     "react/jsx-props-no-spreading": "off",
     "react/button-has-type": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/no-unescaped-entities": "off",
     "prettier/prettier": "error",
     "no-param-reassign": "off",
     "no-return-assign":"off",
