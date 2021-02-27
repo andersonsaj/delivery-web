@@ -1,7 +1,7 @@
 .home-container {
-    padding-top: 90px;
-    margin-bottom: 0;
-  }
+  padding-top: 100px;
+  height: 74vh;
+}
 
   .home-container h1 {
     margin: 0;
